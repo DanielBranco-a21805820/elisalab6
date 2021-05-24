@@ -1,0 +1,32 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>A Meaningful Page Title</title>
+     {% load static %}
+    <link rel="stylesheet" href="{%  static  'website/css/base.css' %}">
+</head>
+<body>
+    <header class="jumbotron text-center">
+        <h1>Guito</h1>
+        <p>Yorkshire Terrier</p>
+        <nav>
+            <a href="{% url 'website:home' %}" class="btn btn-info">Inicio</a>
+            <a href="{% url 'website:guito' %}" class="btn btn-info">Guito</a>
+            <a href="{% url 'website:fotos' %}" class="btn btn-info">Fotos</a>
+        </nav>
+    </header>
+    <article class="container">
+        <main class="col-sm-6">
+	        {% block main %}
+	        {% endblock main %}
+        </main>
+        <aside class="col-sm-6">
+            {% load static %}
+            <img src="{% static 'website/img/Guito.jpeg' %}">
+        </aside>
+    </article>
+    <footer>Universidade Lusofona</footer>
+</body>

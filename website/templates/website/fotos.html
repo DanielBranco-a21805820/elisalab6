@@ -1,0 +1,10 @@
+{% extends 'website/base.html' %}
+
+{% block main %}
+{% load static %}
+    <h3>Inicio</h3>
+    <p>Esta é a galeria de fotos do menino</p>
+<img src="{% static 'website/img/guito1.jpeg' %}">
+<img src="{% static 'website/img/guito2.jpeg' %}">
+<img src="{% static 'website/img/guito3.jpeg' %}">
+{% endblock %}
